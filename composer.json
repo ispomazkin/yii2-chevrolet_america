@@ -23,11 +23,11 @@
 
   },
   "extra": {
-    "bootstrap": "ispomazkin\\chevrolet\\Bootstrap"
+    "bootstrap": "ispomazkin\\chevrolet_america\\Bootstrap"
   },
   "autoload": {
     "psr-4": {
-      "ispomazkin\\chevrolet\\": "src"
+      "ispomazkin\\chevrolet_america\\": "src"
     }
   }
 }
