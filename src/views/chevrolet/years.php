@@ -11,13 +11,13 @@
  */
 use yii\helpers\Html;
 use yii\helpers\Url;
-use ispomazkin\chevrolet\ChevroletAssetBundle;
-ChevroletAssetBundle::register($this);
+use ispomazkin\chevrolet_america\ChevroletAmericaAssetBundle;
+ChevroletAmericaAssetBundle::register($this);
 
 ?>
 
 
 
 <?php foreach($years as $year):?>
-    <?=Html::tag('span',Html::a($year['year'], Url::to(['chevrolet/categories','year_url'=>$year['url']])))?>&nbsp;
+    <?=Html::tag('span',Html::a($year['year'], Url::to(['chevrolet-america/categories','year_url'=>$year['url']])))?>&nbsp;
 <?php endforeach;?>

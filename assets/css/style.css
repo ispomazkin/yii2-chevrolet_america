@@ -16,6 +16,16 @@
     overflow: hidden;
 }
 
+.primen span
+{
+    text-decoration: underline;
+    cursor:pointer;
+    font-weight:700
+}
+.primen span:hover
+{
+    text-decoration: none;
+}
 .chevrolet_item a
 {
     background-color: #f5eeee;

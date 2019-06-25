@@ -13,21 +13,18 @@
 
 use yii\helpers\Html;
 use yii\helpers\Url;
-use ispomazkin\chevrolet\ChevroletAssetBundle;
+use ispomazkin\chevrolet_america\ChevroletAmericaAssetBundle;
+use app\components\Helper;
 
-ChevroletAssetBundle::register($this);
+ChevroletAmericaAssetBundle::register($this);
 
-
-$img_src = $img_path . '/' .  $data['parts'][0]['image'];
+$img_src = $img_path . '/' .  $data['img'];
 ?>
 
 <?=Html::tag('h1',$data['model'].' '.$data['year'])?>
 <?=Html::tag('h2',$data['category'])?>
-<?=Html::tag('h3',$data['group'])?>
+<?=Html::tag('h2',$this->title)?>
 
-<?php if(isset($data['subgroup'])):?>
-    <?=Html::tag('h3',$data['subgroup'])?>
-<?php endif;?>
 
 <div class="wrapper">
     <div class="row">
@@ -45,17 +42,15 @@ $img_src = $img_path . '/' .  $data['parts'][0]['image'];
             <th class="mobile_hidden">Применение</th>
             <th class="mobile_hidden">Период</th>
             <th><span class="mobile_hidden">Количество</span><span class="mobile_visible">Кол-во</span></th>
-            <th class="mobile_hidden">Примечание</th>
         </tr>
         <?php foreach($data['parts'] as $part):?>
             <tr>
                 <td><?=$part['pic']?></td>
                 <td><?=$this->render('_article',['article'=>$part['article'],'search_pattern'=>$search_pattern])?></td>
-                <td><?=$part['type']?></td>
-                <td class="mobile_hidden"><?=$this->render('_description_parts',['text'=>$part['description'],'codes'=>$part['codes']])?></td>
+                <td><?=($part['descr'] . ($part['p.'] ? ', '.$part['p.']:''))?></td>
+                <td class="mobile_hidden primen"><?=$part['primen']?></td>
                 <td class="mobile_hidden"><?=$part['year']?></td>
                 <td><?=$part['qty']?></td>
-                <td class="mobile_hidden"><?=$part['comment']?></td>
             </tr>
         <?php endforeach?>
     </table>

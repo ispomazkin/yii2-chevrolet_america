@@ -11,19 +11,19 @@
 
 use yii\helpers\Html;
 use yii\helpers\Url;
-use ispomazkin\chevrolet\ChevroletAssetBundle;
+use ispomazkin\chevrolet_america\ChevroletAmericaAssetBundle;
 
-ChevroletAssetBundle::register($this);
+ChevroletAmericaAssetBundle::register($this);
 
 ?>
-<?=Html::tag('h1',$data['model'].' '.$data['year'])?>
+<?=Html::tag('h1',$this->title)?>
 <table class="table table-bordered table responsive">
     <tr>
         <th>Категория</th>
     </tr>
     <?php foreach($data['categories'] as $category):?>
         <tr>
-            <td><?=Html::a($category['description'],Url::to(['chevrolet/groups','year_url'=>$data['model_url'],'category_url'=>$category['url']]))?></td>
+            <td><?=Html::a($category['descr2'],Url::to(['chevrolet-america/groups','year_url'=>$data['model_url'],'category_url'=>$category['url']]))?></td>
         </tr>
     <?php endforeach;?>
 </table>

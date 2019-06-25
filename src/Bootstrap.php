@@ -4,10 +4,6 @@ namespace ispomazkin\chevrolet_america;
 
 use Yii;
 use yii\base\BootstrapInterface;
-use app\components\Helper;
-
-
-
 
 
 class Bootstrap implements BootstrapInterface{
@@ -17,10 +13,11 @@ class Bootstrap implements BootstrapInterface{
     {
 
         $module = $app->getModule('chevrolet_america');
-        /* @var $module \ispomazkin\chevrolet\Module */
+        /* @var $module \ispomazkin\chevrolet_america\Module */
 
         $routes = require 'Routes.php';
         //Правила маршрутизации
+
         $app->getUrlManager()->addRules($routes, false);
 
         //для совместимости с проектом zp24.shop

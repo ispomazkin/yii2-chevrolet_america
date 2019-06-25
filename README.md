@@ -1,4 +1,4 @@
-yii2-chevrolet
+yii2-chevrolet_america
 =================
 
 
@@ -7,19 +7,18 @@ yii2-chevrolet
 ------------------
 * Установка пакета с помощью Composer
 ```
-composer require ispomazkin/yii2-chevrolet
+composer require ispomazkin/yii2-chevrolet_america
 ```
 
 
 В конфигурации common/config/main-local.php добавить параметры. 
 
     'modules' => [
-        'chevrolet'=>[
-            'class'=>'\ispomazkin\chevrolet\Module',
+        'chevrolet_america'=>[
+            'class'=>'\ispomazkin\chevrolet_america\Module',
             'host'=>'http://149.154.64.192',
-            'image_path'=>'/img/img_chevrolet',
-            'search_pattern'=>'http://site.com/search/?article={article}&brand=chevrolet',
-            'base_url'=>'/chevrolet'
+            'image_path'=>'/img/img_chevrolet_a',
+            'search_pattern'=>'https://zp24.shop/search/?article={article}&brand=chevrolet',
         ],
     ],
 
@@ -27,34 +26,31 @@ composer require ispomazkin/yii2-chevrolet
 После установки и настройки каталог будет доступен по адресу /chevrolet
 
 Чтобы задать собственные шаблон генерации title, keywords, description,
-используются предустановленные шаблоны переменные {model},{year},{group},{subgroup},{parts} 
+используются предустановленные шаблоны переменные {model},{year},{group},{parts} 
 
         'chevrolet'=>[
-            'class'=>'\ispomazkin\chevrolet\Module',
+            'class'=>'\ispomazkin\chevrolet_america\Module',
             'host'=>'http://149.154.64.192',
-            'image_path'=>'/img/img_chevrolet',
-            'search_pattern'=>'http://site.com/search/?article={article}&brand=chevrolet',
-            'base_url'=>'/chevrolet',
+            'image_path'=>'/img/img_chevrolet_a',
+            'search_pattern'=>'https://zp24.shop/search/?article={article}&brand=chevrolet',
+            'base_url'=>'/chevrolet-america',
             'titlePattern=>[
-                  'years'=>'Запчасти Шевроле',
-                  'categories'=>'{model} {year}',
-                  'groups'=>'{category}',
-                  'sub-groups'=>'{group}',
-                  'parts'=>'{parts}'
+                    'years'=>'Запчасти Шевроле Америка',
+                    'categories'=>'{model} {year}',
+                    'groups'=>'{category}',
+                    'parts'=>'{parts}'
             ],
             'descriptionPattern'=>[
-                    'years'=>'Каталог запчастей Шевроле',
-                    'categories'=>'Каталог запчастей Шевроле {model} {year}',
-                    'groups'=>'Каталог запчастей Шевроле {model} {year} по категории {category}',
-                    'sub-groups'=>'Каталог запчастей Шевроле {model} {year} {category} Группа {group}',
-                    'parts'=>'Каталог запчастей Шевроле {model} {year} {category} {group} {parts}'
+                'years'=>'Каталог запчастей Шевроле Америка',
+                'categories'=>'Каталог запчастей Шевроле Америка {model} {year}',
+                'groups'=>'Каталог запчастей Шевроле Америка {model} {year} по категории {category}',
+                'parts'=>'Каталог запчастей Шевроле Америка {model} {year} {category} {group} {parts}'
             ],
             'keywordsPattern'=>[
-                    'years'=>'EPC chevrolet',
-                    'categories'=>'{model} {year}',
-                    'groups'=>'{model} {year} {group}',
-                    'sub-groups'=>'{subgroup}',
-                    'parts'=>'{parts}'
+                'years'=>'EPC chevrolet America',
+                'categories'=>'{model} {year}',
+                'groups'=>'{model} {year} ',
+                'parts'=>'{parts}'
             ],
         ],
         

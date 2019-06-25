@@ -37,13 +37,12 @@ class Module extends BaseModule
      * @var array
      * Паттерн для вывода различного типа title на страницах
      * Доступны шаблоны
-     * {model},{category},{group},{subgroup},{last}
+     * {model},{category},{group},{last}
      */
     public $titlePattern=[
-        'years'=>'Запчасти Шевроле',
+        'years'=>'Запчасти Шевроле Америка',
         'categories'=>'{model} {year}',
         'groups'=>'{category}',
-        'sub-groups'=>'{group}',
         'parts'=>'{parts}'
     ];
 
@@ -51,15 +50,13 @@ class Module extends BaseModule
      * @var array
      * Паттерн для вывода различного типа keywords на страницах
      * Доступны шаблоны
-     * {model},{category},{group},{subgroup},{last}
+     * {model},{category},{group},{last}
      */
     public $kwdsPattern=[
-        'years'=>'EPC chevrolet',
+        'years'=>'EPC chevrolet America',
         'categories'=>'{model} {year}',
         'groups'=>'{model} {year} ',
-        'sub-groups'=>'{group}',
         'parts'=>'{parts}'
-
     ];
 
 
@@ -67,20 +64,19 @@ class Module extends BaseModule
      * @var array
      * Паттерн для вывода различного типа description на страницах
      * Доступны шаблоны
-     * {model},{category},{group},{subgroup},{last}
+     * {model},{category},{group},{last}
      */
     public $descriptionPattern=[
-        'years'=>'Каталог запчастей Шевроле',
-        'categories'=>'Каталог запчастей Шевроле {model} {year}',
-        'groups'=>'Каталог запчастей Шевроле {model} {year} по категории {category}',
-        'sub-groups'=>'Каталог запчастей Шевроле {model} {year} {category} Группа {group}',
-        'parts'=>'Каталог запчастей Шевроле {model} {year} {category} {group} {parts}'
+        'years'=>'Каталог запчастей Шевроле Америка',
+        'categories'=>'Каталог запчастей Шевроле Америка {model} {year}',
+        'groups'=>'Каталог запчастей Шевроле Америка {model} {year} по категории {category}',
+        'parts'=>'Каталог запчастей Шевроле Америка {model} {year} {category} {group} {parts}'
 
     ];
 
 
 
 
-    public $controllerNamespace = 'ispomazkin\chevrolet\controllers';
+    public $controllerNamespace = 'ispomazkin\chevrolet_america\controllers';
 
 }
